@@ -21,7 +21,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Walkspeed"
+	Name = "Misc"
 })
 
 --[[
@@ -29,7 +29,7 @@ Name = <string> - The name of the section.
 ]]
 
 Tab:AddSlider({
-	Name = "Walkspeed",
+	Name = "Jumppower",
 	Min = 16,
 	Max = 500,
 	Default = 5,
@@ -42,7 +42,7 @@ Tab:AddSlider({
 })
 
 Tab:AddSlider({
-	Name = "Jumppower",
+	Name = "Walkspeed",
 	Min = 16,
 	Max = 500,
 	Default = 5,
@@ -221,7 +221,7 @@ Callback = <function> - The function of the button.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "SOON!",
+	Name = "GUI!",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -233,3 +233,23 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 OrionLib:Init()
+
+local Section = Tab:AddSection({
+	Name = "Destroy GUI"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "ByeBye GUI",
+	Callback = function()
+		OrionLib:Destroy()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
